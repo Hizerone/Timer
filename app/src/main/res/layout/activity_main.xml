@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10px">
+
+    <LinearLayout
+        android:id="@+id/time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@+id/hour"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30pt"
+            android:maxLength="2"
+            android:digits="1234567890"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/minute"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30pt"
+            android:maxLength="2"
+            android:digits="1234567890"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/second"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30pt"
+            android:maxLength="2"
+            android:digits="1234567890"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time">
+
+        <Button
+            android:id="@+id/startbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:layout_toLeftOf="@+id/pause"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/endbutton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/time"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="清空" />
+
+        <Button
+            android:id="@+id/pause"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time"
+            android:layout_toLeftOf="@+id/endbutton"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="退出" />
+    </LinearLayout>
+</RelativeLayout>
